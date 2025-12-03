@@ -87,13 +87,13 @@ To set up and run the Closet by Kaykay E-Commerce Web App locally:
 
 Clone the repository:
 
-git clone <repository-url>
+git clone https://github.com/KerstinPaguio/DATASTALGO-QUIZ1.git
 
 
 Navigate to the project directory:
 
 cd <project-folder-name>
-
+cd DATASTALGO-QUIZ1
 
 Install dependencies (requires Node.js and npm):
 
