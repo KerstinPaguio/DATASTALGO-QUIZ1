@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.aesthetic-title {
+  font-family: 'Poppins', sans-serif;
+  color: #D44C6F; /* deep rose pink for headings */
+  font-weight: 600;
+}
+
+.aesthetic-text {
+  font-family: 'Poppins', sans-serif;
+  color: #4B2E39; /* soft dark rose for body text */
+  line-height: 1.6;
+}
