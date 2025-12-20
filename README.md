@@ -1,109 +1,93 @@
-README: Closet by Kaykay E-Commerce Web App
+CBK Full-Stack: Closet by KayKay E-Commerce
+This repository contains the complete codebase for the Closet by KayKay (CBK) e-commerce platform. It integrates a Django REST API backend with a React frontend to provide a professional, data-driven shopping experience.
 
 🛍️ Project Overview
-
-This project is the development of a professional, modern, and user-friendly e-commerce website for Closet by Kaykay, a small business focused on curated, stylish, and affordable fashion. The goal is to establish the brand's first official online presence with a dedicated, scalable React application that perfectly embodies its personalized, approachable, and stylish brand identity.
-
-Startup Background: Closet by Kaykay
-
-Identity: Closet by Kaykay was founded by Kaykay, an entrepreneur dedicated to personalized styling and providing versatile, high-value fashion pieces.
-
-Aesthetic: The brand is known for offering a curated, stylish, and highly approachable collection of clothing and essential accessories.
-
-Client Reference: Closet by Kaykay Social Media Pages (e.g., Facebook, Instagram)
-fb link:[https://www.facebook.com/ShopCBKOfficial]
-
-🎨 Rationale for Building This Website
-
-This dedicated web application is necessary to provide Closet by Kaykay with a robust online platform, moving beyond reliance on social media to establish a stable, performant, and brand-aligned e-commerce presence.
-
-To provide Closet by Kaykay a professional and interactive online platform to reach more customers beyond social media.
-
-To showcase the clothing products in a clear and organized way, divided into categories (e.g., Tops, Bottoms, Dresses).
-
-To enable easy navigation and browsing for users.
-
-To create a visually appealing website that reflects the brand's unique, approachable, and stylish identity.
-
-To integrate product ratings and detailed descriptions to help customers make informed decisions.
+Closet by KayKay (CBK) is a fashion brand dedicated to curated, stylish, and affordable fashion. This application serves as the brand's official online presence, moving beyond social media to a dedicated, scalable platform for personalized styling.
 
 💻 Technologies Used
+Backend (Django)
+Python 3.12: Primary programming language.
 
-React: Core Frontend library for building dynamic user interfaces.
+Django 5.2.5: Core web framework.
 
-React Bootstrap: For responsive layouts, navigation components (Navbar, Card), and overall styling.
+Django REST Framework (DRF): For building API endpoints and handling requests.
 
-React Router DOM: For handling client-side routing between different screens/pages.
+JsonResponse: For delivering structured product data in JSON format.
 
-JavaScript (ES6+): Logic, interactivity, and data handling.
+Frontend (React)
+React: For building dynamic and reusable user interfaces.
 
-Custom CSS: Custom styling, hover effects, and responsive adjustments to achieve brand look.
+React Bootstrap: For responsive layouts and UI components (Navbars, Cards).
+
+React Router DOM: For client-side routing and seamless page transitions.
+
+JavaScript (ES6+): For frontend logic and data handling.
+
+Custom CSS: For unique brand styling, hover effects, and responsive adjustments.
 
 📂 Project Structure
+Backend Directory
+backend/settings.py: Main configuration including installed apps and middleware.
 
-src/components/Header.jsx: Navigation bar with links to pages.
+base/views.py: API views that handle logic for product retrieval.
 
-src/components/Footer.jsx: Standard site footer section.
+base/products.py: Central data source for product objects (Dummy data).
 
-src/components/Product.jsx: Reusable component for displaying a single product card with image, name, price, and rating.
+base/urls.py: URL routing for the API endpoints.
 
-src/components/Rating.jsx: Component to display product ratings and review counts.
+Frontend Directory (src/)
+components/: Reusable UI elements like Header.jsx, Footer.jsx, and Rating.jsx.
 
-src/screens/HomeScreen.jsx: Landing Page. Features brand introduction, mission, and links to product categories.
+screens/: Main page views including HomeScreen.jsx and ProductDetailScreen.jsx.
 
-src/screens/ClothesScreen.jsx: Product Listing Page. Displays all available clothing products.
+App.js: The main hub for frontend routing logic.
 
-src/screens/ProductDetailScreen.jsx: Displays a single product with full description, image, and ratings.
+products.js: Local data mapping for frontend rendering.
 
-src/products.js: Central Data Source. Contains the array of all clothing product objects for easy management.
+🛣️ API and Client Routes
+Backend API Endpoints
+GET / — Returns a list of all available API routes.
 
-src/App.js: Main file handling the primary routing logic.
+GET /products/ — Returns a full list of all CBK products.
 
-🛣️ Project Routes and Screens
+GET /products/<pk>/ — Returns data for a single product using its unique ID (pk).
 
-Route / (HomeScreen): Landing Page. Introduces the Closet by Kaykay brand narrative and provides links to shop.
+Frontend Page Routes
+Route / (HomeScreen): The landing page featuring the brand narrative and shop links.
 
-Route /clothes (ClothesScreen): Product Category. Displays all clothing items available for purchase.
+Route /clothes (ClothesScreen): The product listing page for all items.
 
-Route /product/:id (ProductDetailScreen): Displays a single product with full description, images, price, and ratings.
+Route /product/:id (ProductDetailScreen): Detailed view showing descriptions, price, and ratings.
 
 ✅ Key Features
+Full-Stack Integration: A React frontend that consumes data dynamically from a Django REST API.
 
-Fully Responsive Design: Optimized for optimal viewing on desktop and mobile devices.
+Responsive Design: Fully optimized for a seamless experience on both mobile and desktop.
 
-Categorized Product Listings: Clear presentation of products by category (e.g., Tops, Bottoms, Dresses).
+Categorized Listings: Products are organized by type (Tops, Bottoms, Dresses) for easy navigation.
 
-Interactive UI: Product cards include hover effects and easy links to detail pages.
+Interactive Feedback: Includes a functional rating system and hover effects on product cards.
 
-Product Ratings: Functional Rating.jsx component displays customer feedback for informed decisions.
+Scalable Architecture: Uses dynamic routing (URL parameters) to handle an expanding inventory.
 
-Easy Navigation: Uses React Router for smooth, client-side routing.
+🚀 Installation and Local Setup
+1. Clone the Project
+Bash
 
-Social Integration: Direct links to social media pages for community engagement.
-
-🚀 Installation and Running Locally
-
-To set up and run the Closet by Kaykay E-Commerce Web App locally:
-
-Clone the repository:
-
-git clone https://github.com/KerstinPaguio/DATASTALGO-QUIZ1.git
-
-
-Navigate to the project directory:
-
+git clone <repository-url>
 cd <project-folder-name>
-cd DATASTALGO-QUIZ1
+2. Setup the Backend
+Bash
 
-Install dependencies (requires Node.js and npm):
+cd backend
+pip install django djangorestframework django-cors-headers
+python manage.py migrate
+python manage.py runserver
+3. Setup the Frontend
+Bash
 
+# Open a new terminal
+cd frontend
 npm install
-
-
-Start the development server:
-
 npm start
-
-
-View the application:
-Open http://localhost:3000 in your web browser.# DATASTALGO-QUIZ1
+Connect with the brand: Closet by KayKay Official Facebook
